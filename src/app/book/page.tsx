@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useMemo } from "react";
+import { useState, useMemo, Suspense } from "react";
 import { useSearchParams } from "next/navigation";
 import { Button } from "@/components/ui/Button";
 import { services, saveAppointment } from "@/lib/data";
@@ -52,7 +52,7 @@ const MONTH_NAMES = [
 
 const OWNER_WHATSAPP = "9360419893"; // replace with shop owner's number
 
-export default function BookPage() {
+function BookContent() {
   const searchParams = useSearchParams();
   const serviceId = Number(searchParams.get("serviceId") ?? 0);
   const service = services[serviceId] ?? services[0];
@@ -440,5 +440,13 @@ export default function BookPage() {
       </div>
     )}
     </>
+  );
+}
+
+export default function BookPage() {
+  return (
+    <Suspense fallback={<div className="flex-grow flex items-center justify-center text-white/40 font-montserrat">Loading...</div>}>
+      <BookContent />
+    </Suspense>
   );
 }
