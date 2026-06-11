@@ -1,6 +1,8 @@
 "use client";
 
 import { useState } from "react";
+import { useState, useMemo, Suspense } from "react";
+import { useSearchParams } from "next/navigation";
 import { Button } from "@/components/ui/Button";
 
 const barbers = [
@@ -44,6 +46,15 @@ const timeSlots = [
 ];
 
 export default function BookPage() {
+function BookContent() {
+  const searchParams = useSearchParams();
+  const serviceId = Number(searchParams.get("serviceId") ?? 0);
+  const service = services[serviceId] ?? services[0];
+
+  const today = new Date();
+  const [calendarDate, setCalendarDate] = useState(
+    new Date(today.getFullYear(), today.getMonth(), 1)
+  );
   const [selectedBarber, setSelectedBarber] = useState(0);
   const [selectedTime, setSelectedTime] = useState<string | null>("01:30 PM");
   
@@ -301,5 +312,13 @@ export default function BookPage() {
         </div>
       </div>
     </div>
+  );
+}
+
+export default function BookPage() {
+  return (
+    <Suspense fallback={<div className="flex-grow flex items-center justify-center text-white/40 font-montserrat">Loading...</div>}>
+      <BookContent />
+    </Suspense>
   );
 }
