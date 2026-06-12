@@ -4,7 +4,7 @@ A modern full-stack appointment booking platform that enables customers to book 
 
 🚀 Tech Stack:
 
-Next.js • React • MongoDB • Tailwind CSS • Vercel
+Next.js • React • Tailwind CSS • Vercel 
 
 ✨ Features:
 
