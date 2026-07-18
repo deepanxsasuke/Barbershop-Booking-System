@@ -31,7 +31,7 @@ export const defaultUser: UserProfile = {
   tierProgress: 0,
 };
 
-export const APPOINTMENTS_KEY = "royalcuts_appointments";
+export const APPOINTMENTS_KEY = "starsaloon_appointments";
 
 export function getAppointments(): Appointment[] {
   if (typeof window === "undefined") return [];
@@ -113,7 +113,7 @@ export const services: Service[] = [
   },
   {
     id: 5,
-    title: "Junior Royal Cut",
+    title: "Junior Star Cut",
     price: "$35+",
     duration: "30 mins",
     description:

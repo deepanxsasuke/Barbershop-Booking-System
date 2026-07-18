@@ -17,10 +17,10 @@ const montserrat = Montserrat({
 });
 
 export const metadata: Metadata = {
-  title: "RoyalCuts | Luxury Barber",
+  title: "Star Saloon | Luxury Barber",
   description:
     "Exclusivity, Meticulous Detail, and Cinematic Elegance. Premium grooming services tailored for the individual.",
-  keywords: "barber, luxury grooming, haircut, beard, RoyalCuts",
+  keywords: "barber, luxury grooming, haircut, beard, Star Saloon",
 };
 
 export default function RootLayout({

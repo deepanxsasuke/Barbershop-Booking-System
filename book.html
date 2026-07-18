@@ -3,7 +3,7 @@
 <html class="dark" lang="en"><head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>RoyalCuts | Select Barber &amp; Book</title>
+<title>Star Saloon | Select Barber &amp; Book</title>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&amp;family=Playfair+Display:wght@600;700&amp;display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
@@ -145,7 +145,7 @@
 <body class="antialiased min-h-screen flex flex-col pt-20">
 <!-- TopNavBar (Web) -->
 <nav class="hidden md:flex bg-surface/80 backdrop-blur-lg dark:bg-surface/80 fixed top-0 w-full z-50 border-b border-outline-variant/20 shadow-2xl flex justify-between items-center h-20 px-margin-desktop max-w-container-max-width mx-auto left-0 right-0">
-<div class="font-display-lg text-headline-md text-primary tracking-tighter">RoyalCuts</div>
+<div class="font-display-lg text-headline-md text-primary tracking-tighter">Star Saloon</div>
 <div class="flex items-center gap-8">
 <a class="font-label-md text-label-md uppercase tracking-widest text-on-surface/80 hover:text-primary transition-colors hover:bg-white/5 transition-all duration-300 px-4 py-2 rounded-lg" href="#">Services</a>
 <a class="font-label-md text-label-md uppercase tracking-widest text-primary border-b-2 border-primary pb-1 px-4 py-2" href="#">Barbers</a>
@@ -244,7 +244,7 @@
 <h2 class="font-headline-lg text-headline-lg text-on-surface mb-1">Appointment Details</h2>
 <div class="flex items-center gap-2 text-on-surface-variant font-body-md text-body-md">
 <span class="material-symbols-outlined text-sm">content_cut</span>
-<span>The Royal Shave &amp; Cut</span>
+<span>The Star Shave &amp; Cut</span>
 <span class="mx-2">•</span>
 <span>60 Min</span>
 <span class="mx-2">•</span>
@@ -363,7 +363,7 @@
       <div class="md:col-span-2">
         <div class="flex items-center gap-2 mb-4">
           <span class="material-symbols-outlined text-primary text-2xl">content_cut</span>
-          <span class="font-display-lg text-3xl font-bold text-primary">RoyalCuts</span>
+          <span class="font-display-lg text-3xl font-bold text-primary">Star Saloon</span>
         </div>
         <p class="font-body-md text-sm text-on-surface-variant max-w-sm leading-relaxed">
           Exclusivity, Meticulous Detail, and Cinematic Elegance. We provide
@@ -396,18 +396,18 @@
           </li>
           <li class="flex items-center gap-2">
             <span class="material-symbols-outlined text-primary text-base">mail</span>
-            info@royalcuts.com
+            info@starsaloon.com
           </li>
           <li class="flex items-center gap-2">
             <span class="material-symbols-outlined text-primary text-base">phone</span>
-            +1 (555) 123-4567
+            +91 90473 18761
           </li>
         </ul>
       </div>
     </div>
 
     <div class="border-t border-outline-variant/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-on-surface-variant font-body-md">
-      <span>© 2024 RoyalCuts Luxury Barber. All rights reserved.</span>
+      <span>© 2024 Star Saloon Luxury Barber. All rights reserved.</span>
       <div class="flex gap-6">
         <a href="#" class="hover:text-primary transition-colors">Privacy Policy</a>
         <a href="#" class="hover:text-primary transition-colors">Terms of Service</a>
@@ -454,7 +454,7 @@
         </div>
         <div>
           <label class="font-label-md text-caption uppercase tracking-widest text-on-surface-variant mb-1.5 block">Your Phone Number</label>
-          <input id="custPhone" type="tel" placeholder="e.g. +91 98765 43210"
+          <input id="custPhone" type="tel" placeholder="e.g. +91 90473 18761"
             class="w-full rounded-lg px-4 py-3 font-body-md text-body-md text-on-surface placeholder-on-surface-variant/40 outline-none"
             style="background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.12)"
             onkeydown="if(event.key==='Enter') sendToWhatsApp()"/>
@@ -479,14 +479,14 @@
 
 <script>
   // ✅ OWNER CONFIG — change to the actual barbershop owner WhatsApp number (with country code, no + or spaces)
-  const OWNER_WHATSAPP = "919876543210"; // Example: India +91 98765 43210
+  const OWNER_WHATSAPP = "919047318761"; // Example: India +91 90473 18761
 
   // Track selected state
   let selectedBarberName = "Marcus Vance";
   let selectedBarberRole = "Master Barber";
   let selectedDateStr = new Date().toLocaleDateString("en-IN", { day: "numeric", month: "short", year: "numeric" });
   let selectedTimeStr = "01:30 PM";
-  let selectedService = "The Royal Shave & Cut";
+  let selectedService = "The Star Shave & Cut";
 
   // Interactive Calendar Dates
   const calendarDates = document.getElementById('calendar-dates');
@@ -559,7 +559,7 @@
     btn.disabled = true;
 
     const message =
-      `🪒 *New Appointment Request — RoyalCuts*\n\n` +
+      `🪒 *New Appointment Request — Star Saloon*\n\n` +
       `👤 *Customer:* ${name}\n` +
       `📱 *Phone:* ${phone}\n` +
       `✂️ *Service:* ${selectedService}\n` +

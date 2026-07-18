@@ -9,7 +9,7 @@ export function Footer() {
           <div className="md:col-span-2">
             <div className="flex items-center gap-2 mb-4">
               <span className="material-symbols-outlined text-primary text-2xl">content_cut</span>
-              <span className="font-playfair text-3xl font-bold text-gradient-gold">RoyalCuts</span>
+              <span className="font-playfair text-3xl font-bold text-gradient-gold">Star Saloon</span>
             </div>
             <p className="text-sm text-white/50 font-montserrat max-w-sm leading-relaxed">
               Exclusivity, Meticulous Detail, and Cinematic Elegance. We provide
@@ -53,18 +53,18 @@ export function Footer() {
               </li>
               <li className="flex items-center gap-2">
                 <span className="material-symbols-outlined text-primary text-base">mail</span>
-                info@royalcuts.com
+                info@starsaloon.com
               </li>
               <li className="flex items-center gap-2">
                 <span className="material-symbols-outlined text-primary text-base">phone</span>
-                +1 (555) 123-4567
+                +91 90473 18761
               </li>
             </ul>
           </div>
         </div>
 
         <div className="border-t border-white/5 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-white/30 font-montserrat">
-          <span>© {new Date().getFullYear()} RoyalCuts Luxury Barber. All rights reserved.</span>
+          <span>© {new Date().getFullYear()} Star Saloon Luxury Barber. All rights reserved.</span>
           <div className="flex gap-6">
             <a href="#" className="hover:text-primary transition-colors">Privacy Policy</a>
             <a href="#" className="hover:text-primary transition-colors">Terms of Service</a>

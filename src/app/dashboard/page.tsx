@@ -10,7 +10,7 @@ const SERVICE_ICONS: Record<string, string> = {
   "Precision Fade": "content_cut",
   "Custom Color": "palette",
   "Executive Facial": "spa",
-  "Junior Royal Cut": "child_care",
+  "Junior Star Cut": "child_care",
 };
 
 function getDaysUntil(dateStr: string): string {
@@ -130,7 +130,7 @@ export default function DashboardPage() {
         <div className="md:col-span-4 bg-[#1C1C1C] rounded-2xl p-6 flex flex-col items-center justify-center text-center relative overflow-hidden border border-white/5">
           <div className="absolute -top-12 -right-12 w-32 h-32 bg-primary/20 rounded-full blur-3xl" />
           <span className="material-symbols-outlined text-primary mb-4 text-5xl fill-current">diamond</span>
-          <h3 className="font-playfair text-2xl font-bold text-white mb-1">Royal Rewards</h3>
+          <h3 className="font-playfair text-2xl font-bold text-white mb-1">Star Rewards</h3>
           <div className="font-playfair text-5xl font-bold text-primary mb-4">
             {loyaltyPoints.toLocaleString()}
           </div>

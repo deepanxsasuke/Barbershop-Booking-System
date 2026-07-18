@@ -2,7 +2,7 @@ import { ServiceCard } from "@/components/ui/ServiceCard";
 import { services } from "@/lib/data";
 
 export const metadata = {
-  title: "Our Services | RoyalCuts Luxury Barber",
+  title: "Our Services | Star Saloon Luxury Barber",
   description:
     "Explore our signature grooming services — from precision fades to hot towel shaves.",
 };

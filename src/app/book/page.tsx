@@ -6,7 +6,7 @@ import Link from "next/link";
 import { services } from "@/lib/data";
 
 // ✅ OWNER CONFIG — change this to the barbershop owner's WhatsApp number (with country code, no spaces/dashes)
-const OWNER_WHATSAPP = "919876543210"; // Example: India +91 98765 43210
+const OWNER_WHATSAPP = "919047318761"; // Example: India +91 90473 18761
 const barbers = [
   {
     name: "Marcus Vance",
@@ -87,10 +87,10 @@ function BookContent() {
 
     const barber = barbers[selectedBarber];
     const message =
-      `🪒 *New Appointment Request — RoyalCuts*\n\n` +
+      `🪒 *New Appointment Request — Star Saloon*\n\n` +
       `👤 *Customer:* ${customerName}\n` +
       `📱 *Phone:* ${customerPhone}\n` +
-      `✂️ *Service:* ${service?.title ?? "The Royal Shave & Cut"}\n` +
+      `✂️ *Service:* ${service?.title ?? "The Star Shave & Cut"}\n` +
       `👨‍💼 *Barber:* ${barber.name} (${barber.role})\n` +
       `📅 *Date:* ${formatDate(selectedDate)}\n` +
       `⏰ *Time:* ${selectedTime}\n\n` +
@@ -172,7 +172,7 @@ function BookContent() {
                   <label className="font-montserrat text-xs uppercase tracking-widest text-white/50 mb-1.5 block">Your Phone Number</label>
                   <input
                     type="tel"
-                    placeholder="e.g. +91 98765 43210"
+                    placeholder="e.g. +91 90473 18761"
                     value={customerPhone}
                     onChange={(e) => setCustomerPhone(e.target.value)}
                     className="w-full rounded-lg px-4 py-3 font-montserrat text-sm text-white placeholder-white/30 outline-none"
@@ -324,7 +324,7 @@ function BookContent() {
                 <div className="flex flex-wrap items-center gap-x-2 gap-y-1 text-white/60 font-montserrat text-sm w-full">
                   <div className="flex items-center gap-1">
                     <span className="material-symbols-outlined text-sm">content_cut</span>
-                    <span>{service?.title ?? "The Royal Shave & Cut"}</span>
+                    <span>{service?.title ?? "The Star Shave & Cut"}</span>
                   </div>
                   <span className="hidden sm:inline">•</span>
                   <span>{service?.duration ?? "60 Min"}</span>

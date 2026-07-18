@@ -17,7 +17,7 @@ export default function Home() {
         </div>
         <div className="relative z-10 text-center px-6 max-w-[1280px] mx-auto flex flex-col items-center">
           <span className="font-montserrat text-sm font-semibold text-primary tracking-[0.2em] uppercase mb-4">
-            Welcome to RoyalCuts
+            Welcome to Star Saloon
           </span>
           <h1 className="font-playfair text-4xl md:text-7xl font-bold text-white mb-6 max-w-4xl drop-shadow-[0_0_10px_rgba(212,175,55,0.5)]">
             Premium Grooming Experience
@@ -175,7 +175,7 @@ export default function Home() {
                 ))}
               </div>
               <p className="font-montserrat text-white/80 mb-8 leading-relaxed">
-                "Stepping into RoyalCuts feels like stepping into a high-end
+                "Stepping into Star Saloon feels like stepping into a high-end
                 atelier. The atmosphere is quiet, confident, and the results are
                 consistently flawless."
               </p>
