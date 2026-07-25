@@ -2,9 +2,9 @@ import { ServiceCard } from "@/components/ui/ServiceCard";
 import { services } from "@/lib/data";
 
 export const metadata = {
-  title: "Our Services | Star Saloon Luxury Barber",
+  title: "Our Services | Star Saloon A/C Master Ananth",
   description:
-    "Explore our signature grooming services — from precision fades to hot towel shaves.",
+    "Explore our signature grooming services — from precision haircuts to hot towel shaves by Master Ananth.",
 };
 
 export default function ServicesPage() {

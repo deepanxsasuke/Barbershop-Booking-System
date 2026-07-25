@@ -17,10 +17,10 @@ const montserrat = Montserrat({
 });
 
 export const metadata: Metadata = {
-  title: "Star Saloon | Luxury Barber",
+  title: "Star Saloon A/C | Master Ananth Barber Shop",
   description:
-    "Exclusivity, Meticulous Detail, and Cinematic Elegance. Premium grooming services tailored for the individual.",
-  keywords: "barber, luxury grooming, haircut, beard, Star Saloon",
+    "Exclusivity, Meticulous Detail, and Cinematic Elegance. Premium grooming services tailored for the individual by Master Barber Ananth.",
+  keywords: "barber, luxury grooming, haircut, beard, Star Saloon A/C, Master Ananth",
 };
 
 export default function RootLayout({

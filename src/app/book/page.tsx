@@ -9,42 +9,25 @@ import { services } from "@/lib/data";
 const OWNER_WHATSAPP = "919047318761"; // Example: India +91 90473 18761
 const barbers = [
   {
-    name: "Marcus Vance",
+    name: "Ananth",
     role: "Master Barber",
-    experience: "10 yrs",
+    experience: "10+ yrs",
     rating: "5.0",
-    specialties: ["Fade Specialist", "Beard Sculpting"],
-    image:
-      "https://lh3.googleusercontent.com/aida-public/AB6AXuBOyWIJLRGn1ahjDYCIiJJSMRJPwE7KuoJPODuCM9eSj9YKO_YqvTjz3j-7KqN5wmZK2z8aGZaW4tGFJzOYbIXoOi9fOZMKHupWOHl4AlWUmQ_CCW_Px1dgxKn3auJ_QpcRPxcUQueMzkgGCtE-XbGTq10bOJ0iGGVyHrnlfYauuYZV0IK1rF4Gs9Qe1CSp_xgGDh1NIFz-0RwYEp0fAu7GZ_HrXELGHxSU2aMYvwAG3_uY2eaRymZy1cvDNalLtT6K8iqET9y1YYP1",
-  },
-  {
-    name: "Julian Reed",
-    role: "Senior Barber",
-    experience: "6 yrs",
-    rating: "4.9",
-    specialties: ["Classic Cuts", "Hot Towel Shave"],
-    image:
-      "https://lh3.googleusercontent.com/aida-public/AB6AXuDVzQIa9HHapJQYE2X0kxQ49qgDMF3t-txztUlzsiPRXdDuhCryVJfJJ2HOi8D4i31TkNOkxlSyNojUp1WCEdntXuxUX_bitBazonBDGGzYlM_gSJTYvGz7ib3oCmdjk_n74hJj6yFFbuMg74qi5CY8sDFtmbULEyNsEnQF6EFxVUTEwRv0wJTQUzQESPkFjqRUTsUj-iKcm6bpzKk3mgnPo_CZZ496N6pYb0dsuOJOoRzD_MEDwZUUHbWMciFRV86wioJHuJzEsZLU",
-  },
-  {
-    name: "Elena Silva",
-    role: "Stylist",
-    experience: "8 yrs",
-    rating: "4.8",
-    specialties: ["Long Hair", "Texture"],
-    image:
-      "https://lh3.googleusercontent.com/aida-public/AB6AXuBmKEgAKJp3jGzfBkUsG660r_dcxAKZwpqbOjysrpVUiewOLOTVDp0jCZgHnp569gaSZvzMA76P0PoTdnTkOH8XAhg6tqNPaEW0sFbA9OcEumR0tyfeyMvr4Frgl68Ys0ef-cdaf00G_nN9isJFK0mm4AKYZfMRY2tqF8EXQ6zmLm-dr6q8WXS3QV4QoKoU9T6tZ3qMjBhxzympPdh-gjTWVJZRJwp0xx6Gf5Ra5PAamgOGGqreoVTdckWDVQN1hm-1OZhzEz8VccJV",
+    specialties: ["Signature Cut & Styling", "Beard Trimming & Shave", "Facials & Color"],
+    image: "/images/anand.jpg",
   },
 ];
 
 const timeSlots = [
-  "09:00 AM",
-  "10:30 AM",
-  "11:00 AM",
-  "01:30 PM",
-  "03:00 PM",
-  "04:30 PM",
-  "05:00 PM",
+  "08:00 AM - 08:45 AM",
+  "09:00 AM - 09:45 AM",
+  "10:00 AM - 10:45 AM",
+  "12:00 PM - 12:45 PM",
+  "01:00 PM - 01:45 PM",
+  "02:00 PM - 02:45 PM",
+  "05:00 PM - 05:45 PM",
+  "06:00 PM - 06:45 PM",
+  "07:00 PM - 07:45 PM",
 ];
 
 function BookContent() {
@@ -53,7 +36,7 @@ function BookContent() {
   const service = services[serviceId] ?? services[0];
 
   const [selectedBarber, setSelectedBarber] = useState(0);
-  const [selectedTime, setSelectedTime] = useState<string | null>("01:30 PM");
+  const [selectedTime, setSelectedTime] = useState<string | null>("08:00 AM - 08:45 AM");
   const [currentMonth, setCurrentMonth] = useState<Date>(new Date());
   const [selectedDate, setSelectedDate] = useState<Date>(new Date());
 
@@ -87,7 +70,7 @@ function BookContent() {
 
     const barber = barbers[selectedBarber];
     const message =
-      `🪒 *New Appointment Request — Star Saloon*\n\n` +
+      `🪒 *New Appointment Request — Star Saloon A/C*\n\n` +
       `👤 *Customer:* ${customerName}\n` +
       `📱 *Phone:* ${customerPhone}\n` +
       `✂️ *Service:* ${service?.title ?? "The Star Shave & Cut"}\n` +
@@ -137,19 +120,23 @@ function BookContent() {
               </div>
 
               {/* Booking summary pill */}
-              <div className="mb-6 p-4 rounded-xl" style={{ background: "rgba(212,175,55,0.07)", border: "1px solid rgba(212,175,55,0.2)" }}>
-                <div className="flex flex-col gap-1.5 font-montserrat text-sm text-white/70">
+              <div className="mb-6 p-4 rounded-xl flex items-center gap-4" style={{ background: "rgba(212,175,55,0.07)", border: "1px solid rgba(212,175,55,0.2)" }}>
+                <div className="w-14 h-14 rounded-lg overflow-hidden border border-primary/40 shrink-0 bg-[#121317]">
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img src={service?.image} alt={service?.title} className="w-full h-full object-cover" />
+                </div>
+                <div className="flex flex-col gap-1 font-montserrat text-xs text-white/70 flex-1">
+                  <div className="flex justify-between">
+                    <span>Service</span>
+                    <span className="text-white font-bold">{service?.title}</span>
+                  </div>
                   <div className="flex justify-between">
                     <span>Barber</span>
                     <span className="text-white font-semibold">{barbers[selectedBarber].name}</span>
                   </div>
                   <div className="flex justify-between">
-                    <span>Date</span>
-                    <span className="text-white font-semibold">{selectedDate.toLocaleDateString("en-IN", { day: "numeric", month: "short", year: "numeric" })}</span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span>Time</span>
-                    <span className="text-primary font-bold">{selectedTime}</span>
+                    <span>Date & Time</span>
+                    <span className="text-primary font-bold">{selectedDate.toLocaleDateString("en-IN", { day: "numeric", month: "short" })} • {selectedTime}</span>
                   </div>
                 </div>
               </div>
@@ -314,27 +301,75 @@ function BookContent() {
         </div>
 
         {/* Right Column: Booking Calendar & Slots */}
-        <div className="w-full md:w-7/12 flex flex-col">
+        <div className="w-full md:w-7/12 flex flex-col gap-6">
+          {/* Visual Service Selection Drawer with Image Representations */}
+          <div className="glassmorphism rounded-2xl p-6 relative overflow-hidden">
+            <div className="flex justify-between items-center mb-4">
+              <h2 className="font-playfair text-xl font-bold text-white flex items-center gap-2">
+                <span className="material-symbols-outlined text-primary text-xl">content_cut</span>
+                Select Service ({services.length} Available)
+              </h2>
+              <span className="text-xs font-montserrat text-primary uppercase tracking-wider font-semibold">
+                Click any service
+              </span>
+            </div>
+            <div className="flex gap-4 overflow-x-auto pb-2 custom-scrollbar">
+              {services.map((item, idx) => {
+                const isSelected = (service?.id ?? 0) === item.id;
+                return (
+                  <Link
+                    key={item.id}
+                    href={`/book?serviceId=${item.id}`}
+                    className={`flex-none w-48 rounded-xl p-3 border transition-all duration-300 flex flex-col gap-2 group ${
+                      isSelected
+                        ? "bg-primary/10 border-primary shadow-[0_0_15px_rgba(212,175,55,0.3)]"
+                        : "bg-[#16171c]/60 border-white/10 hover:border-white/30"
+                    }`}
+                  >
+                    <div className="h-28 rounded-lg overflow-hidden relative">
+                      {/* eslint-disable-next-line @next/next/no-img-element */}
+                      <img
+                        src={item.image}
+                        alt={item.title}
+                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                      />
+                      <div className="absolute top-2 right-2 bg-black/70 backdrop-blur-sm px-2 py-0.5 rounded text-[10px] font-bold text-primary">
+                        {item.price}
+                      </div>
+                    </div>
+                    <div>
+                      <h4 className="font-montserrat text-xs font-bold text-white line-clamp-1 group-hover:text-primary transition-colors">
+                        {item.title}
+                      </h4>
+                      <p className="font-montserrat text-[10px] text-white/50 mt-0.5">
+                        {item.duration}
+                      </p>
+                    </div>
+                  </Link>
+                );
+              })}
+            </div>
+          </div>
+
           <div className="glassmorphism rounded-2xl p-6 md:p-10 flex flex-col h-full relative overflow-hidden">
             <div className="absolute top-0 right-0 w-64 h-64 bg-primary/5 rounded-full blur-[80px] pointer-events-none"></div>
 
-            <div className="flex flex-col sm:flex-row sm:justify-between items-start sm:items-end mb-8 border-b border-white/5 pb-6 relative z-10 gap-4">
-              <div className="w-full">
-                <h2 className="font-playfair text-2xl font-bold text-white mb-1">Appointment Details</h2>
-                <div className="flex flex-wrap items-center gap-x-2 gap-y-1 text-white/60 font-montserrat text-sm w-full">
-                  <div className="flex items-center gap-1">
-                    <span className="material-symbols-outlined text-sm">content_cut</span>
-                    <span>{service?.title ?? "The Star Shave & Cut"}</span>
+            <div className="flex flex-col sm:flex-row sm:justify-between items-start sm:items-center mb-8 border-b border-white/5 pb-6 relative z-10 gap-4">
+              <div className="flex items-center gap-4">
+                <div className="w-16 h-16 rounded-xl overflow-hidden border border-primary/40 shrink-0 bg-[#121317]">
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img src={service?.image} alt={service?.title} className="w-full h-full object-cover" />
+                </div>
+                <div>
+                  <span className="text-[10px] font-montserrat uppercase tracking-widest text-primary font-semibold">Selected Service</span>
+                  <h3 className="font-playfair text-xl font-bold text-white leading-tight">{service?.title ?? "Haircut + Beard Trimming"}</h3>
+                  <div className="flex items-center gap-2 text-white/60 font-montserrat text-xs mt-1">
+                    <span>{service?.duration ?? "45 mins"}</span>
+                    <span>•</span>
+                    <span className="text-primary font-bold">{service?.price ?? "₹200"}</span>
                   </div>
-                  <span className="hidden sm:inline">•</span>
-                  <span>{service?.duration ?? "60 Min"}</span>
-                  <span className="mx-1">•</span>
-                  <span className="text-primary font-semibold">{service?.price ?? "$120"}</span>
                 </div>
               </div>
-              <Link href="/services" className="text-white/60 md:hover:text-primary active:text-primary transition-colors font-montserrat text-sm font-semibold uppercase flex items-center gap-1 shrink-0">
-                Edit <span className="material-symbols-outlined text-sm">edit</span>
-              </Link>
             </div>
 
             <div className="mb-8 relative z-10">

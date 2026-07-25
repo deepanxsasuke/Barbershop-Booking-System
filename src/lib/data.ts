@@ -58,67 +58,113 @@ export interface Service {
   duration: string;
   description: string;
   image: string;
+  objectPosition?: string;
 }
 
 export const services: Service[] = [
   {
     id: 0,
-    title: "Classic Haircut",
-    price: "$45+",
+    title: "Haircut + Beard Trimming",
+    price: "₹200",
     duration: "45 mins",
-    description:
-      "A tailored haircut designed to suit your individual style and facial structure. Includes a consultation, precision cut, and styling.",
-    image:
-      "https://lh3.googleusercontent.com/aida-public/AB6AXuDJdwslf-7W_wR_kEDh0lMNAzsdDRZ-_z2lDJezxx3vqfeQ0V8Z2oMng-r0FFAmIbysgfd4RMlSVhUryvVWwIGqO5voTsTyxAuO86xc-cusEmojBTRGwGU-PHpT7F1dyyF1KyWuGhpb3WuPp38rIeHXl5GoC9RPwBKIauJ3rg8sQ71rd9tfN-J4ROssfhnOQNuKE5BLdXXSdl6Kv3NCCm59NEyjI8Lrux4lG9VGZWi4Fb9RxP8KhbOYJGYmevKYpWPmWpnx3V1SsZ1k",
+    description: "Complete signature haircut and detailed beard shaping with precision line-up.",
+    image: "https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=600&q=80",
   },
   {
     id: 1,
-    title: "Beard Sculpting",
-    price: "$30+",
-    duration: "30 mins",
-    description:
-      "Detailed beard shaping, line-up, and conditioning. Finished with premium hot towel treatment and beard oil.",
-    image:
-      "https://lh3.googleusercontent.com/aida-public/AB6AXuDPL3uXx3eXCplSalcsGgr8Q48d-xNFe3RkBF7w5cVDhQWYAtBOfE4FmL3AqEDfVP4qTlXbUlYdpHHecq9ZifItBv0qitVvjt4TOVy4oIpP3sPoB1kzQzczQeVNrQ5TUIWHZX3coJSSWDamkJNApEOMkaABroBe2kueFDrQUp_Doo6C1llkKla5vzMCx6sriSvq6LQo5r5BjaKGkJI-rGx8Vdlj5h83Lbt_H4lkI-3PmfElMzVuFBl5rH94wT2-xMkfvrEUMqutqIey",
+    title: "Haircut + Clean Shave",
+    price: "₹170",
+    duration: "45 mins",
+    description: "Tailored luxury cut paired with a classic smooth hot towel clean shave.",
+    image: "https://images.unsplash.com/photo-1621605815971-fbc98d665033?auto=format&fit=crop&w=600&q=80",
   },
   {
     id: 2,
-    title: "Precision Fade",
-    price: "$55+",
+    title: "Haircut + Shave + Hair Dye",
+    price: "₹300",
     duration: "60 mins",
-    description:
-      "Flawless skin fade blending into any length on top. Requires meticulous attention to detail for a seamless transition.",
-    image:
-      "https://lh3.googleusercontent.com/aida-public/AB6AXuCYqOs0ab7-h5hV2K_Dqy9EiOzH5n28MRq62LLMTAGntZJ-RQ0LxDLzhzyNg5bL8i0xG4_HMqY1I6br6-81SsCcKByeZiLapMVElOR_DUDMji6hccjsGxcAhl4ZjvR86fZQmB9KT8Qt7bJl_zP0x2LVpSfD25GPcCpYmZxDF9hG-dppng8LBM35SzH4kqXS9tDc0OoOoDY5aiyAy7n_xxxSWIkozxvEPVAq4jaNcbSN8srLKX0BQn1b6ttd3XHoVjP1jTQZHZyt2-Kg",
+    description: "Full transformation package with precision cut, clean shave, and natural hair color.",
+    image: "https://images.unsplash.com/photo-1599351431202-1e0f0137899a?auto=format&fit=crop&w=600&q=80",
   },
   {
     id: 3,
-    title: "Custom Color",
-    price: "$85+",
-    duration: "90 mins",
-    description:
-      "Professional grey blending or full color transformation using premium, nourishing dyes for a natural, rich finish.",
-    image:
-      "https://lh3.googleusercontent.com/aida-public/AB6AXuAY8T1g1Tn4oAq1A3qdKuDwbfT5Gwzp7vZIFZ3WvrWQwdVfVZAedbWIaa3eD7RLPrAzUCUZ9tATvSn6l8tFihL2Pg0q2NuP7pXty2gZ39hh5wk3d-MYKfRTGe571Yr51vklFmYE1mwltGtXQjLNb6Pg2gaZiat36b4CtsDAo9UFcbBClRNY5Y1MgYibPS91h6_P3J7PuGCIM-LqKV9MlFDtwcPph-E7tPbo9hGL7ibTPb9WCCU2tKYcxBBlg2Xq9EHEpbZYsiS2QM32",
+    title: "Haircut Only",
+    price: "₹120",
+    duration: "30 mins",
+    description: "Classic or modern haircut customized to suit your unique style.",
+    image: "https://images.unsplash.com/photo-1585747860715-2ba37e788b70?auto=format&fit=crop&w=600&q=80",
   },
   {
     id: 4,
-    title: "Executive Facial",
-    price: "$60+",
-    duration: "45 mins",
-    description:
-      "Deep cleansing, exfoliation, and hydration tailored for men's skin. Includes a relaxing hot towel wrap and facial massage.",
-    image:
-      "https://lh3.googleusercontent.com/aida-public/AB6AXuBzdoD1oSB8BE5kBKHxZIgMFColZ73yrhGFARjd0E3mcKdm7M-AfVMwlZrzWH9wjA-OZRB70O0UsMWz_KSnEUrAcOje9cEu0_qTl0pSQqGWSiYEcypwBrwZO09rBuHeQ37X0RdremmifcujWAgb_WNTDPD8kisbcp18ikQxiyttimEguhUyFglnf5Azc8-7xCOE6YwWOKflGhqRw9Dx9X01jRU7g3f3Ec8tnLR5EBgdTdSFE43JI9QlN7MPKn0hs9jZ8_qiGpOx4OFd",
+    title: "Clean Shave",
+    price: "₹70",
+    duration: "20 mins",
+    description: "Traditional razor-smooth clean shave with warm foam and post-shave balm.",
+    image: "/images/clean_shave.jpg",
   },
   {
     id: 5,
-    title: "Junior Star Cut",
-    price: "$35+",
+    title: "Beard Trimming",
+    price: "₹100",
+    duration: "20 mins",
+    description: "Expert beard shaping, edging, line-up, and nourishing beard oil finish.",
+    image: "/images/beard_trimming.jpg",
+  },
+  {
+    id: 6,
+    title: "Children's Haircut (Below 10 Years)",
+    price: "₹100",
     duration: "30 mins",
-    description:
-      "A premium grooming experience tailored for younger gentlemen (under 12). Includes a stylish cut and finishing.",
-    image:
-      "https://lh3.googleusercontent.com/aida-public/AB6AXuDj7GMubk_vr8_3gAGrHz7hvgZt33fI7jDn-0FjoZ5vwvJsZzpkbchqjPk0-wYxW3U13ciSlpDibZ1zQxl5hL6VNlSSIztdebU-BWyV9uLB3feocFQB4-vUk_Jj0pQVChQ4NdFMipBFdkMb0s-wZblYxeraOPQTewiDb9DPR0OEqwzVmaoMwbNZXwKD65WWz_6xQke2yumPbo4kQUBIu03WrjdnITzRxI69-H7YD6kFBHa1dMl7YQbGYwlgk68w6ktCF70sb92DUMJc",
+    description: "Fun, gentle, and stylish haircut session for young boys under 10 years.",
+    image: "/images/children_haircut.jpg",
+    objectPosition: "65% top",
+  },
+  {
+    id: 7,
+    title: "Baby Haircut",
+    price: "₹150",
+    duration: "30 mins",
+    description: "Ultra-careful and calm first haircuts for toddlers and infants.",
+    image: "https://images.unsplash.com/photo-1519689680058-324335c77eba?auto=format&fit=crop&w=600&q=80",
+  },
+  {
+    id: 8,
+    title: "Facial",
+    price: "₹800",
+    duration: "45 mins",
+    description: "Deep cleansing facial, steam exfoliation, scrub, and hydrating face massage.",
+    image: "https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=600&q=80",
+  },
+  {
+    id: 9,
+    title: "Bleaching",
+    price: "₹200",
+    duration: "30 mins",
+    description: "Skin brightening and dark spot reduction treatment for a radiant complexion.",
+    image: "/images/bleaching.jpg",
+  },
+  {
+    id: 10,
+    title: "Hair Color / Hair Dye",
+    price: "₹300",
+    duration: "45 mins",
+    description: "Premium rich grey coverage and vibrant color transformation.",
+    image: "https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=600&q=80",
+  },
+  {
+    id: 11,
+    title: "Head Massage",
+    price: "₹150 / ₹200",
+    duration: "30 mins",
+    description: "Relaxing stress-relief head massage with aromatic herbal or coconut oils.",
+    image: "/images/head_massage.jpg",
+  },
+  {
+    id: 12,
+    title: "Face Wash / Face Cleansing",
+    price: "₹100",
+    duration: "20 mins",
+    description: "Instant dirt & oil removal face wash with botanical cleansing foam.",
+    image: "https://images.unsplash.com/photo-1556760544-74068565f05c?auto=format&fit=crop&w=600&q=80",
   },
 ];

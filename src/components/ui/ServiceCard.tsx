@@ -7,9 +7,10 @@ interface ServiceCardProps {
   duration: string;
   description: string;
   image: string;
+  objectPosition?: string;
 }
 
-export function ServiceCard({ id, title, price, duration, description, image }: ServiceCardProps) {
+export function ServiceCard({ id, title, price, duration, description, image, objectPosition }: ServiceCardProps) {
   return (
     <div className="glassmorphism rounded-2xl overflow-hidden flex flex-col group hover:-translate-y-2 hover:shadow-[0_16px_48px_rgba(0,0,0,0.6),0_0_24px_rgba(212,175,55,0.12)] transition-all duration-300">
       {/* Image */}
@@ -18,6 +19,7 @@ export function ServiceCard({ id, title, price, duration, description, image }: 
         <img
           alt={title}
           className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 opacity-80 group-hover:opacity-100"
+          style={objectPosition ? { objectPosition } : undefined}
           src={image}
         />
         <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a0a] via-transparent to-transparent" />

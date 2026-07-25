@@ -26,7 +26,7 @@ export function Navbar() {
               content_cut
             </span>
             <span className="font-playfair text-2xl font-bold text-gradient-gold">
-              Star Saloon
+              Star Saloon A/C
             </span>
           </Link>
 

@@ -44,8 +44,8 @@ export default function DashboardPage() {
   const recentVisits = [...completed].reverse().slice(0, 5);
   const totalVisits = completed.length;
   const topService = getTopService(completed);
-  const preferredBarber = upcoming?.barber ?? (completed[completed.length - 1]?.barber ?? "—");
-  const preferredBarberRole = upcoming?.barberRole ?? (completed[completed.length - 1]?.barberRole ?? "");
+  const preferredBarber = upcoming?.barber ?? (completed[completed.length - 1]?.barber ?? "Ananth");
+  const preferredBarberRole = upcoming?.barberRole ?? (completed[completed.length - 1]?.barberRole ?? "Master Barber");
 
   // loyalty: 100 pts per visit, tiers: 0 Silver, 500 Gold, 1000 Platinum
   const loyaltyPoints = totalVisits * 100;
@@ -183,8 +183,9 @@ export default function DashboardPage() {
         {/* Preferred Barber + Stats */}
         <div className="md:col-span-6 grid grid-rows-2 gap-6">
           <div className="bg-[#1C1C1C] rounded-2xl p-6 border border-white/10 flex items-center gap-6 group hover:border-primary/30 transition-colors cursor-pointer">
-            <div className="w-20 h-20 rounded-full overflow-hidden border-2 border-primary/50 shrink-0 group-hover:border-primary transition-colors bg-[#121317] flex items-center justify-center">
-              <span className="material-symbols-outlined text-primary text-3xl">person</span>
+            <div className="w-20 h-20 rounded-full overflow-hidden border-2 border-primary/50 shrink-0 group-hover:border-primary transition-colors bg-[#121317]">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src="/images/anand.jpg" alt="Master Barber Ananth" className="w-full h-full object-cover" />
             </div>
             <div className="flex-1">
               <p className="font-montserrat text-xs text-primary uppercase tracking-widest font-semibold mb-1">

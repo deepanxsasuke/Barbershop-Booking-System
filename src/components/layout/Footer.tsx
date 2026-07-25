@@ -9,7 +9,7 @@ export function Footer() {
           <div className="md:col-span-2">
             <div className="flex items-center gap-2 mb-4">
               <span className="material-symbols-outlined text-primary text-2xl">content_cut</span>
-              <span className="font-playfair text-3xl font-bold text-gradient-gold">Star Saloon</span>
+              <span className="font-playfair text-3xl font-bold text-gradient-gold">Star Saloon A/C</span>
             </div>
             <p className="text-sm text-white/50 font-montserrat max-w-sm leading-relaxed">
               Exclusivity, Meticulous Detail, and Cinematic Elegance. We provide
@@ -44,16 +44,19 @@ export function Footer() {
           {/* Contact */}
           <div>
             <h4 className="font-montserrat font-bold text-white mb-6 uppercase tracking-widest text-xs">
-              Contact
+              Contact & Hours
             </h4>
             <ul className="space-y-4 text-sm text-white/50 font-montserrat">
               <li className="flex items-start gap-2">
                 <span className="material-symbols-outlined text-primary text-base mt-0.5">location_on</span>
-                <span>123 Luxury Ave, Suite 100<br />New York, NY 10001</span>
+                <span>100 Ft Road, Anna Nagar 2nd Street<br /><span className="text-primary/80 font-medium">(Nearby Kalyani Car Pattarai)</span></span>
               </li>
-              <li className="flex items-center gap-2">
-                <span className="material-symbols-outlined text-primary text-base">mail</span>
-                info@starsaloon.com
+              <li className="flex items-start gap-2">
+                <span className="material-symbols-outlined text-primary text-base mt-0.5">schedule</span>
+                <div>
+                  <span className="text-white font-medium">8:00 AM – 8:00 PM</span>
+                  <p className="text-xs text-white/40 mt-0.5">Breaks: 11AM-12PM & 3PM-5PM</p>
+                </div>
               </li>
               <li className="flex items-center gap-2">
                 <span className="material-symbols-outlined text-primary text-base">phone</span>
@@ -64,10 +67,10 @@ export function Footer() {
         </div>
 
         <div className="border-t border-white/5 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-white/30 font-montserrat">
-          <span>© {new Date().getFullYear()} Star Saloon Luxury Barber. All rights reserved.</span>
+          <span>© {new Date().getFullYear()} Star Saloon A/C — Master Ananth Barber Shop. All rights reserved.</span>
           <div className="flex gap-6">
-            <a href="#" className="hover:text-primary transition-colors">Privacy Policy</a>
-            <a href="#" className="hover:text-primary transition-colors">Terms of Service</a>
+            <Link href="/privacy" className="hover:text-primary transition-colors">Privacy Policy</Link>
+            <Link href="/terms" className="hover:text-primary transition-colors">Terms of Service</Link>
           </div>
         </div>
       </div>
